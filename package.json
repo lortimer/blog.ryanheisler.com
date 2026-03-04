@@ -1,26 +1,22 @@
 {
   "name": "ryanheisler.com",
   "version": "0.0.0",
-  "description": "Ryan Heisler's personal website",
+  "description": "Ryan Heisler's personal blog",
   "scripts": {
-    "test": "npm run build-tests && vitest --run",
-    "api-watch": "tsc --watch",
-    "api-dev": "nodemon ./dist/server.js",
-    "frontend-dev": "rm -rf ./.parcel-cache && parcel watch --no-cache --target frontend",
-    "build": "npm run clean && tsc && parcel build --target frontend",
-    "clean": "rm -rf ./.parcel-cache ./dist ./.test-dist",
-    "start": "node dist/server.js"
+    "frontend-dev": "npm run clean && parcel serve --no-cache --target frontend",
+    "build": "npm run clean && parcel build --target frontend",
+    "clean": "rm -rf ./.parcel-cache"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lortimer/ryanheisler.com-vanilla.git"
+    "url": "git+https://github.com/lortimer/blog.ryanheisler.com.git"
   },
   "author": "Ryan Heisler (ryanheisler.com)",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/lortimer/ryanheisler.com-vanilla/issues"
+    "url": "https://github.com/lortimer/blog.ryanheisler.com/issues"
   },
-  "homepage": "https://github.com/lortimer/ryanheisler.com-vanilla#readme",
+  "homepage": "https://github.com/lortimer/blog.ryanheisler.com#readme",
   "dependencies": {
     "express": "^4.19.2"
   },
@@ -30,33 +26,18 @@
     "@parcel/transformer-jsonld": "^2.16.4",
     "@parcel/transformer-webmanifest": "^2.16.4",
     "@parcel/transformer-xml": "^2.16.4",
-    "@playwright/test": "^1.53.0",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.4.8",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/express": "^4.17.21",
-    "@types/jsdom": "^21.1.7",
-    "@types/node": "^25.3.3",
-    "@types/supertest": "^6.0.2",
-    "jsdom": "^24.1.1",
-    "msw": "^2.7.0",
-    "nodemon": "^3.1.4",
     "parcel": "^2.16.4",
-    "supertest": "^7.0.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.4",
-    "vitest": "^3.2.2"
+    "typescript": "^5.5.4"
   },
   "targets": {
     "frontend": {
       "source": [
-        "./src/public/index.html",
-        "./src/public/heisldice/heisldice.html",
-        "./src/public/googlec8167c7efd0aec0a.html",
-        "./src/public/sitemap.xml",
-        "./src/public/robots.txt"
+        "./public/index.html",
+        "./public/googlec8167c7efd0aec0a.html",
+        "./public/sitemap.xml",
+        "./public/robots.txt"
       ],
-      "distDir": "./dist/public",
+      "distDir": "./dist",
       "optimize": false
     }
   }

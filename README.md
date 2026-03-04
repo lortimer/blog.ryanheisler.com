@@ -1,17 +1,14 @@
-# ryanheisler.com
+# blog.ryanheisler.com
 
 Clone this repository and run `npm install`
 
-To run the full app in development mode, run `npm run api-watch`, `npm run api-dev`, and `npm run frontend-dev` in
-separate terminals.
+To run the full app in development mode, run `npm run frontend-dev`
 
-To build and run the full app in production mode, run `npm run build` followed by `npm start`.
-
-To run tests, run `npm test`
+To compile the files into a distributable directory which can be served from e.g. S3, `npm build`
 
 ## Update site content - 1st Draft
 
-Currently, I'm hosting this site on AWS S3 with Cloudfront. I don't need a server right now because everything is pre-rendered and needs no JavaScript. Eventually, I may move to server hosting, especially if I want to do any kind of backend rendering.
+Currently, I'm hosting this site on AWS S3 with Cloudfront.
 
 The following is how you can update the site with new content.
 

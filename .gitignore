@@ -1,17 +1,10 @@
 .idea
 node_modules
 dist
-.test-dist
 .parcel-cache
 local-assets
-src/public/fonts/files/
-src/public/favicon
-src/public/blog/**/images
+public/fonts/files/
+public/favicon
+public/blog/**/images
 post-images
 google*.html
-
-# Playwright
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
